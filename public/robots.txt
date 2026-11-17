@@ -1,12 +1,62 @@
-# Robots.txt for instill.info
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 
-# Restricted AI Crawlers
+User-agent: OAI-SearchBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-agent: ChatGPT-User
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-agent: Claude-SearchBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-agent: Claude-User
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-agent: PerplexityBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-agent: Perplexity-User
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-agent: DuckAssistBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-agent: MistralAI-User
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-agent: meta-webindexer
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-agent: meta-externalfetcher
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-agent: Amzn-SearchBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-agent: Amzn-User
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
 User-agent: GPTBot
 Disallow: /
 
 User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
 Disallow: /
 
 User-agent: Applebot-Extended
@@ -21,6 +71,5 @@ Disallow: /
 User-agent: Bytespider
 Disallow: /
 
-# XML Sitemaps
 Sitemap: https://instill.info/sitemap.xml
 Sitemap: https://www.instill.info/sitemap.xml
