@@ -71,5 +71,5 @@ Disallow: /
 User-agent: Bytespider
 Disallow: /
 
-Sitemap: https://instill.info/sitemap.xml
 Sitemap: https://www.instill.info/sitemap.xml
+Sitemap: https://www.instill.info/sitemap-www.xml

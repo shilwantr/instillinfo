@@ -80,7 +80,7 @@
         <div class="container">
           <div class="badge">inStill Sitemap Protocol 0.9</div>
           <h1>XML Sitemap</h1>
-          <p class="desc">This XML sitemap is indexed by search engines like Google, Bing, and AI search bots. Generated for <strong>https://instill.info/</strong>.</p>
+          <p class="desc">This XML sitemap is indexed by search engines like Google, Bing, and AI search bots. Generated for <strong>https://www.instill.info/</strong>.</p>
           <table>
             <thead>
               <tr>

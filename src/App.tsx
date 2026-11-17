@@ -169,7 +169,7 @@ export const App: React.FC = () => {
 
       const canonicalEl = document.querySelector('link[rel="canonical"]');
       if (canonicalEl) {
-        canonicalEl.setAttribute('href', `https://instill.info${cleanPath === '/' ? '' : cleanPath}`);
+        canonicalEl.setAttribute('href', `https://www.instill.info${cleanPath === '/' ? '' : cleanPath}`);
       }
 
       if (route.infoPage) {

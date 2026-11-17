@@ -738,7 +738,7 @@ const pages = [
 ];
 
 function generateHtml(page) {
-  const canonicalUrl = `https://instill.info/${page.slug}`;
+  const canonicalUrl = `https://www.instill.info/${page.slug}`;
   return `<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
@@ -768,7 +768,7 @@ function generateHtml(page) {
     <meta property="og:url" content="${canonicalUrl}" />
     <meta property="og:title" content="${page.title}" />
     <meta property="og:description" content="${page.desc}" />
-    <meta property="og:image" content="https://instill.info/assets/logo.png" />
+    <meta property="og:image" content="https://www.instill.info/assets/logo.png" />
     <meta property="og:image:width" content="1024" />
     <meta property="og:image:height" content="1024" />
     <meta property="og:image:alt" content="instilll Mindfulness Feline Mascot" />
@@ -779,7 +779,7 @@ function generateHtml(page) {
     <meta name="twitter:site" content="@instilllapp" />
     <meta name="twitter:title" content="${page.title}" />
     <meta name="twitter:description" content="${page.desc}" />
-    <meta name="twitter:image" content="https://instill.info/assets/logo.png" />
+    <meta name="twitter:image" content="https://www.instill.info/assets/logo.png" />
 
     <!-- Theming & Favicon -->
     <meta name="theme-color" content="#FAFAF7" />
@@ -802,8 +802,8 @@ function generateHtml(page) {
       "description": "${page.desc}",
       "isPartOf": {
         "@type": "WebSite",
-        "@id": "https://instill.info/#website",
-        "url": "https://instill.info/",
+        "@id": "https://www.instill.info/#website",
+        "url": "https://www.instill.info/",
         "name": "instilll"
       },
       "breadcrumb": {
@@ -813,7 +813,7 @@ function generateHtml(page) {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://instill.info/"
+            "item": "https://www.instill.info/"
           },
           {
             "@type": "ListItem",
