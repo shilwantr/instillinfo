@@ -1,6 +1,7 @@
 {
   "framework": "vite",
   "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/sitemap.xml",
@@ -37,7 +38,28 @@
     }
   ],
   "rewrites": [
+    { "source": "/today", "destination": "/today/index.html" },
+    { "source": "/practice", "destination": "/practice/index.html" },
+    { "source": "/breathe", "destination": "/breathe/index.html" },
+    { "source": "/heal", "destination": "/heal/index.html" },
+    { "source": "/sleep", "destination": "/sleep/index.html" },
+    { "source": "/journal", "destination": "/journal/index.html" },
+    { "source": "/telehealth", "destination": "/telehealth/index.html" },
+    { "source": "/therapy", "destination": "/therapy/index.html" },
+    { "source": "/desk-clock", "destination": "/desk-clock/index.html" },
+    { "source": "/standby", "destination": "/standby/index.html" },
+    { "source": "/doombreaker", "destination": "/doombreaker/index.html" },
+    { "source": "/companions", "destination": "/companions/index.html" },
+    { "source": "/games", "destination": "/games/index.html" },
+    { "source": "/soundboard", "destination": "/soundboard/index.html" },
+    { "source": "/safety", "destination": "/safety/index.html" },
+    { "source": "/themes", "destination": "/themes/index.html" },
+    { "source": "/science", "destination": "/science/index.html" },
     { "source": "/lab", "destination": "/lab/index.html" },
+    { "source": "/faq", "destination": "/faq/index.html" },
+    { "source": "/about", "destination": "/about/index.html" },
+    { "source": "/contact", "destination": "/contact/index.html" },
+    { "source": "/downloads", "destination": "/downloads/index.html" },
     { "source": "/privacy", "destination": "/privacy/index.html" },
     { "source": "/terms", "destination": "/terms/index.html" },
     { "source": "/privacy-policy", "destination": "/privacy-policy/index.html" },

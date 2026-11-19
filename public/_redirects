@@ -1,4 +1,26 @@
 # Dedicated Static HTML Pages
+/today  /today/index.html  200
+/practice  /practice/index.html  200
+/breathe  /breathe/index.html  200
+/heal  /heal/index.html  200
+/sleep  /sleep/index.html  200
+/journal  /journal/index.html  200
+/telehealth  /telehealth/index.html  200
+/therapy  /therapy/index.html  200
+/companions  /companions/index.html  200
+/games  /games/index.html  200
+/desk-clock  /desk-clock/index.html  200
+/standby  /standby/index.html  200
+/doombreaker  /doombreaker/index.html  200
+/soundboard  /soundboard/index.html  200
+/safety  /safety/index.html  200
+/themes  /themes/index.html  200
+/science  /science/index.html  200
+/lab  /lab/index.html  200
+/faq  /faq/index.html  200
+/about  /about/index.html  200
+/contact  /contact/index.html  200
+/downloads  /downloads/index.html  200
 /privacy  /privacy/index.html  200
 /terms  /terms/index.html  200
 /privacy-policy  /privacy-policy/index.html  200
@@ -13,29 +35,5 @@
 /learn/sensory-overload-gentle-grounding  /learn/sensory-overload-gentle-grounding/index.html  200
 /learn/hydration-movement-cognitive-balance  /learn/hydration-movement-cognitive-balance/index.html  200
 
-# Canonical App & Content Routes (Single Page Application Fallbacks)
-/today  /index.html  200
-/practice  /index.html  200
-/breathe  /index.html  200
-/heal  /index.html  200
-/sleep  /index.html  200
-/journal  /index.html  200
-/telehealth  /index.html  200
-/therapy  /index.html  200
-/companions  /index.html  200
-/games  /index.html  200
-/desk-clock  /index.html  200
-/standby  /index.html  200
-/doombreaker  /index.html  200
-/soundboard  /index.html  200
-/safety  /index.html  200
-/themes  /index.html  200
-/science  /index.html  200
-/lab  /index.html  200
-/faq  /index.html  200
-/about  /index.html  200
-/contact  /index.html  200
-/downloads  /index.html  200
-
-# Catch-All SPA Rewrite
+# Catch-All SPA Fallback Rewrite
 /*  /index.html  200
