@@ -49,6 +49,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { name: 'Companions', href: '/companions', id: 'companions' },
     { name: 'Desk Clock', href: '/desk-clock', id: 'desk-clock' },
     { name: 'Soundboard', href: '/soundboard', id: 'soundboard' },
+    { name: 'Guides', href: '/learn', id: 'wellness-library' },
   ];
 
   // Scroll spy to highlight active section as user scrolls

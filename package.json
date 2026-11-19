@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:pages": "node scripts/generate-static-pages.js && node --experimental-strip-types scripts/generate-learn-pages.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",

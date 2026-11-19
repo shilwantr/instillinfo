@@ -18,6 +18,8 @@ import { StandByClockModal } from './components/StandByClockModal';
 import { SoundscapesModal } from './components/SoundscapesModal';
 import { InfoPageModal, InfoModalPage } from './components/InfoPageModal';
 import { LivingTheme } from './components/LivingCanvas';
+import { WellnessLibrarySection } from './components/WellnessLibrarySection';
+import { WellnessView } from './components/WellnessView';
 
 interface RouteConfig {
   sectionId?: string;
@@ -139,6 +141,43 @@ const ROUTE_META_MAP: Record<string, RouteConfig> = {
     desc: 'Install instilll as an Android application, iOS Progressive Web App (PWA), or run directly in any modern desktop or mobile browser.',
     infoPage: 'downloads',
   },
+  '/learn': {
+    sectionId: 'wellness-library',
+    title: 'Wellness Library & Mental Health Guides | instilll',
+    desc: 'Explore science-backed guides on anxiety, insomnia, burnout, doomscrolling, trauma recovery, and vagal breathwork designed for daily calm.',
+  },
+  '/learn/anxiety-panic-vagal-regulation': {
+    title: 'Anxiety, Panic & Vagal Breathwork Guide | instilll',
+    desc: 'Understand sympathetic hyperarousal and learn how 4-4-4-4 box breathing and extended-exhale vagal toning calm acute anxiety and panic.',
+  },
+  '/learn/doomscrolling-dopamine-attention-reset': {
+    title: 'Stop Doomscrolling & Reset Dopamine | instilll',
+    desc: 'Break infinite-feed dopamine loops and attention fatigue with gentle sensory interventions, mindful scroll limits, and focus rituals.',
+  },
+  '/learn/insomnia-circadian-rhythm-sleep-hygiene': {
+    title: 'Insomnia & Circadian Sleep Hygiene Guide | instilll',
+    desc: 'Quiet racing nighttime thoughts with 4-7-8 breathwork, circadian wind-down cues, and distraction-free StandBy bedside rituals.',
+  },
+  '/learn/burnout-chronic-stress-recovery': {
+    title: 'Burnout & Chronic Stress Recovery Guide | instilll',
+    desc: 'Recognize early signs of burnout, track emotional and biometric trends with cubic spline analytics, and rebuild sustainable mental presence.',
+  },
+  '/learn/trauma-ptsd-somatic-emdr-therapy': {
+    title: 'Trauma, PTSD & Bilateral EMDR Guide | instilll',
+    desc: 'Learn how trauma affects autonomic regulation and how somatic grounding, bilateral audio, and licensed EMDR telehealth support healing.',
+  },
+  '/learn/depression-low-mood-behavioral-activation': {
+    title: 'Low Mood & Behavioral Activation Guide | instilll',
+    desc: 'Navigate emotional numbness and low mood with low-friction daily rituals: micro-walks, hydration check-ins, journaling, and 24/7 support.',
+  },
+  '/learn/sensory-overload-gentle-grounding': {
+    title: 'Sensory Overload & Gentle Grounding | instilll',
+    desc: 'Dissolve overstimulation and cognitive fatigue using predictable acoustic cues, tactile micro-play, and low-contrast visual sanctuaries.',
+  },
+  '/learn/hydration-movement-cognitive-balance': {
+    title: 'Hydration, Walking & Mental Clarity | instilll',
+    desc: 'Discover how mild dehydration and sedentary stretches impact mood and focus, and how gentle hydration chimes and step goals restore balance.',
+  },
 };
 
 export const App: React.FC = () => {
@@ -146,6 +185,7 @@ export const App: React.FC = () => {
   const [isClockModalOpen, setIsClockModalOpen] = useState(false);
   const [isSoundModalOpen, setIsSoundModalOpen] = useState(false);
   const [activeInfoPage, setActiveInfoPage] = useState<InfoModalPage>(null);
+  const [learnPath, setLearnPath] = useState<string | null>(null);
 
   const themeCycleOrder: LivingTheme[] = ['CW', 'FW', 'MS', 'CD', 'OA', 'TP', 'ZR', 'HW', 'TD', 'LT', 'RT'];
 
@@ -176,6 +216,13 @@ export const App: React.FC = () => {
         setActiveInfoPage(route.infoPage);
       } else {
         setActiveInfoPage(null);
+      }
+
+      if (cleanPath.startsWith('/learn')) {
+        setLearnPath(cleanPath);
+        setActiveInfoPage(null);
+      } else {
+        setLearnPath(null);
       }
 
       if (route.openModal === 'clock') {
@@ -293,7 +340,10 @@ export const App: React.FC = () => {
         {/* Section 10: Profile, Safety & 24/7 Crisis Lifeline */}
         <ProfileLifelineSection />
 
-        {/* Section 11: The 11 Living Canvas Ambient Themes Matrix */}
+        {/* Section 11: Wellness Library & Mindful Science Guides */}
+        <WellnessLibrarySection onNavigate={navigateTo} />
+
+        {/* Section 12: The 11 Living Canvas Ambient Themes Matrix */}
         <LivingThemesMatrix
           currentTheme={currentTheme}
           onThemeSelect={(t) => setCurrentTheme(t)}
@@ -336,6 +386,18 @@ export const App: React.FC = () => {
           navigateTo('/');
         }}
       />
+
+      {/* Wellness & Clinical Guides Reading Hub / Modal */}
+      {learnPath && (
+        <WellnessView
+          currentPath={learnPath}
+          onNavigate={navigateTo}
+          onClose={() => {
+            setLearnPath(null);
+            navigateTo('/');
+          }}
+        />
+      )}
     </div>
   );
 };

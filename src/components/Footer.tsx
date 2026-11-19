@@ -1,7 +1,8 @@
 import React from 'react';
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp, BookOpen } from 'lucide-react';
 import { soundEngine } from '../utils/audio';
 import { InstilllWordmark } from './InstilllWordmark';
+import { WELLNESS_ARTICLES } from '../data/wellnessArticles';
 
 interface FooterProps {
   onNavigate?: (path: string) => void;
@@ -215,6 +216,39 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenInfo }) => {
                 <ArrowUp className="w-4 h-4" />
               </button>
             </div>
+          </div>
+        </div>
+
+        {/* Dedicated Wellness Guides Links Row (1-hop crawlable links) */}
+        <div className="pt-10 pb-8 border-b border-slate-100">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
+            <div className="flex items-center gap-2">
+              <span className="text-sm select-none">📚</span>
+              <h3 className="text-xs uppercase font-mono font-bold tracking-widest text-slate-900">
+                Wellness Library &amp; Clinical Guides
+              </h3>
+            </div>
+            <a
+              href="/learn"
+              onClick={(e) => handleLinkClick(e, '/learn')}
+              className="text-xs font-mono font-bold text-pop-forest hover:underline flex items-center gap-1"
+            >
+              <span>View All Guides</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2.5 text-xs text-slate-600">
+            {WELLNESS_ARTICLES.map((article) => (
+              <a
+                key={article.slug}
+                href={article.path}
+                onClick={(e) => handleLinkClick(e, article.path)}
+                className="hover:text-pop-forest transition-colors truncate block py-1 font-medium"
+              >
+                <span className="mr-1.5">{article.icon}</span>
+                <span>{article.title}</span>
+              </a>
+            ))}
           </div>
         </div>
 

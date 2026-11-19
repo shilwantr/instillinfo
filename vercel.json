@@ -42,6 +42,8 @@
     { "source": "/terms", "destination": "/terms/index.html" },
     { "source": "/privacy-policy", "destination": "/privacy-policy/index.html" },
     { "source": "/privacy-policy/spycam-pro", "destination": "/privacy-policy/spycam-pro/index.html" },
+    { "source": "/learn", "destination": "/learn/index.html" },
+    { "source": "/learn/:slug", "destination": "/learn/:slug/index.html" },
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/sitemap-www.xml", "destination": "/sitemap-www.xml" },
     { "source": "/robots.txt", "destination": "/robots.txt" },
